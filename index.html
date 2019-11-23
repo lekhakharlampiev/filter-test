@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="filter__block">
+            <form class="filter__form">
+                <div class="form-section">
+                    <div class="form__inputs__group">
+                        <span>МАРКА:</span>
+                        <select name="model" id="model">
+                            <option value="any" selected>Любая</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="BMW">BMW</option>
+                            <option value="tesla">Tesla</option>
+                            <option value="lada">Lada</option>
+                            <option value="mitsubishi">Mitsubishi</option>
+                        </select>
+                    </div>
+                    <div class="form__inputs__group">    
+                        <span>ТИП ДВИГАТЕЛЯ:</span>
+                        <select name="motor" id="motor">
+                            <option value="any" selected>Любой</option>
+                            <option value="petrol">Бензин</option>
+                            <option value="diesel">Дизель</option>
+                            <option value="hybrid">Гибрид</option>
+                            <option value="electric">Электро</option>
+                        </select>
+                    </div>     
+                </div>
+                <div class="form-section form-section--kilometrage">
+                    <span>ПРОБЕГ</span>
+                    <div class="kilometrage">
+                        <label for="kilometrage-from">от</label>
+                        <input type="number" maxlength="7" id="kilometrage-from" name="kilometrage-from">
+                        <label for="kilometrage-to">до</label>
+                        <input type="number" maxlength="7" id="kilometrage-to" name="kilometrage-to">
+                    </div>
+                </div>
+                <div class="form-section form-section--year">
+                    <span>ГОД ВЫПУСКА</span>
+                    <div class="year-manufacture">
+                        <label for="year-from">с</label>
+                        <select name="year-from" id="year-from">
+                            <option value="0" selected></option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                        </select>
+                        <label for="year-to">по</label>
+                        <select name="year-to" id="year-to">
+                            <option value="0" selected></option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">найти</button>
+                <button type="reset" class="form__reset">сбросить фильтр</button>
+            </form>
+        </section>
+        <section class="result"></section>
+    </div>
+    <template id="card">
+        <div class="car-card">
+            <div class="car-model">
+                <span>Модель:</span>
+                <span class="model-text"></span>
+            </div>
+            <div class="car-motor">
+                <span>Двигатель:</span>
+                <span class="motor-text"></span>
+            </div>
+            <div class="car-kilometrage">
+                <span>Пробег:</span>
+                <span class="kilometrage-text"></span>
+                км.
+            </div>
+            <div class="car-year">
+                <span>Год выпуска:</span>
+                <span class="year-text"></span>
+                г.
+            </div>
+        </div>
+    </template>   
+    <script src="index.js"></script>
+</body>
+
+</html>
